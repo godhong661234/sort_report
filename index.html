@@ -1,40 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>氣泡排序範例</title>
-    <style>
-        body { font-family: sans-serif; padding: 2rem; }
-        #output { margin-top: 1rem; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Link</title>
 </head>
 <body>
-    <h1>氣泡排序法 (Bubble Sort)</h1>
-    <p>按下按鈕來執行排序：</p>
-    <button id="run">執行排序</button>
-
-    <div id="output"></div>
-
-    <script>
-        function bubbleSort(arr) {
-            let n = arr.length;
-            for (let i = 0; i < n - 1; i++) {
-                for (let j = 0; j < n - 1 - i; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-                    }
-                }
-            }
-            return arr;
-        }
-
-        document.getElementById('run').addEventListener('click', () => {
-            const sample = [5, 3, 8, 4, 2];
-            const out = document.getElementById('output');
-            out.textContent = `未排序: ${sample.join(', ')}\n排序後: ${bubbleSort(sample).join(', ')}`;
-            console.log('未排序:', sample.slice());
-            console.log('排序後:', bubbleSort(sample));
-        });
-    </script>
+    <h1>Welcome to Bubble Sort Page</h1>
+    <a href="bubble sort.html">Go to Bubble Sort</a>
 </body>
 </html>
