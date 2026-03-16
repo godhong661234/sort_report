@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇排序法</title>
+</head>
+<body>
+    <h1>選擇排序法</h1>
+    <label for="numElements">選擇元素的個數:</label>
+    <input type="number" id="numElements" min="1" value="5">
+    <button onclick="generateArray()">生成數組</button>
+    <button onclick="selectionSort()">排序</button>
+    
+    <h2>數組:</h2>
+    <div id="arrayDisplay"></div>
+
+    <script>
+        let array = [];
+
+        function generateArray() {
+            const numElements = document.getElementById('numElements').value;
+            array = Array.from({length: numElements}, () => Math.floor(Math.random() * 100));
+            document.getElementById('arrayDisplay').innerText = array.join(', ');
+        }
+
+        function selectionSort() {
+            for (let i = 0; i < array.length - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < array.length; j++) {
+                    if (array[j] < array[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex !== i) {
+                    [array[i], array[minIndex]] = [array[minIndex], array[i]];
+                }
+            }
+            document.getElementById('arrayDisplay').innerText = array.join(', ');
+        }
+    </script>
+</body>
+</html>
+<h2>排序結果:</h2>
+<div id="sortedArrayDisplay"></div>
+
+<script>
+    function selectionSort() {
+        for (let i = 0; i < array.length - 1; i++) {
+            let minIndex = i;
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex !== i) {
+                [array[i], array[minIndex]] = [array[minIndex], array[i]];
+            }
+            // 更新排序過程中的數組顯示
+            document.getElementById('sortedArrayDisplay').innerText = array.join(', ');
+        }
+        document.getElementById('arrayDisplay').innerText = array.join(', ');
+    }
+</script>
+<h2>排序過程:</h2>
+<div id="stepDisplay"></div>
+
+<script>
+    function selectionSort() {
+        for (let i = 0; i < array.length - 1; i++) {
+            let minIndex = i;
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex !== i) {
+                [array[i], array[minIndex]] = [array[minIndex], array[i]];
+            }
+            // 更新排序過程中的數組顯示
+            document.getElementById('sortedArrayDisplay').innerText = array.join(', ');
+            document.getElementById('stepDisplay').innerText += `步驟 ${i + 1}: ${array.join(', ')}\n`;
+        }
+        document.getElementById('arrayDisplay').innerText = array.join(', ');
+    }
+</script>
