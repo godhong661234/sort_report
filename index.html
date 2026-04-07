@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Sort Link</title>
+    <title>我的排序法學習大廳</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding: 2rem; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #f9f9f9;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; }
+        .menu-list { list-style-type: none; padding: 0; }
+        .menu-list li { margin-bottom: 15px; }
+        .menu-list a {
+            display: block;
+            padding: 15px 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            color: #34495e;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .menu-list a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Bubble Sort Page</h1>
-    <a href="bubble sort.html">Go to Bubble Sort</a>
+    <h1>📊 排序演算法大廳</h1>
+    <p>歡迎來到這裡！請選擇你想觀察的排序法：</p>
+    
+    <ul class="menu-list">
+        <li><a href="bubble-sort.html">🫧 氣泡排序法 (Bubble Sort)</a></li>
+        <li><a href="selection-sort.html">🎯 選擇排序法 (Selection Sort)</a></li>
+        <li><a href="insertion-sort.html">🃏 插入排序法 (Insertion Sort)</a></li>
+        <li><a href="merge-sort.html">✂️ 合併排序法 (Merge Sort)</a></li>
+        <li><a href="quick-sort.html">⚡ 快速排序法 (Quick Sort)</a></li>
+    </ul>
 </body>
 </html>
